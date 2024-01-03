@@ -10,7 +10,7 @@ const Login = () => {
     const { signIn, googleLogin, faceBookLogin } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
-    const from = location.state?.from?.pathname;
+    const from = location.state?.from?.pathname || '/'
 
 
     const handleLogin = (e) =>{
@@ -41,7 +41,7 @@ const Login = () => {
             name: result.user?.displayName,
         };
        
-        navigate('/addContact')
+        navigate('/')
         });
     };
 
@@ -54,7 +54,7 @@ const Login = () => {
           if (user && user.email) {
             
             console.log('Facebook login successful:', user);
-            navigate('/addContact')
+            navigate('/')
           } else {
             
             console.error('Facebook login error: Missing or invalid email');
@@ -66,7 +66,7 @@ const Login = () => {
       
       
     return (
-        <div className="max-w-6xl mx-auto mt-6">
+        <div className="max-w-6xl mx-auto mt-6 px-3 mb-4">
 <div className="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
     <form onSubmit={handleLogin} className="space-y-6" action="#">
         <h5 className="text-xl font-medium text-gray-900 dark:text-white">Sign in to our platform</h5>

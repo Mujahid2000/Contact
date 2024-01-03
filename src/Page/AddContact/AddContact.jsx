@@ -26,7 +26,7 @@ const AddContact = () => {
         console.log(formData);
 
         
-        axios.post('http://localhost:5050/addContact', formData)
+        axios.post('https://contact-server-sandy.vercel.app/addContact', formData)
         .then(response => {
         console.log(response.data);
             Swal.fire('Contact added successfully!', '', 'success');

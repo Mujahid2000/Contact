@@ -12,7 +12,7 @@
 //     console.log(data);
     
 //     useEffect(() =>{ if (user?.email)
-//         {axios.get(`http://localhost:5050/addContact/${_id}/${user?.email}`)
+//         {axios.get(`https://contact-server-sandy.vercel.app/addContact/${_id}/${user?.email}`)
 //         .then(res => res.data)
 //         .then(data => {
 //             setData(data)
@@ -35,7 +35,7 @@
 //         console.log(formData);
 
 //         try{
-//             const response = await axios.patch(`http://localhost:5050/addContact/${_id}`, formData)
+//             const response = await axios.patch(`https://contact-server-sandy.vercel.app/addContact/${_id}`, formData)
 //             const data = response.data
 //             console.log(data);
 //             if (data.modifiedCount > 0) {

@@ -53,7 +53,7 @@ const MyNavbar = () => {
             </div>
       <Navbar.Collapse>
         
-        <Navbar.Link href="/addContact"><Button color="purple"> Add Contacts</Button></Navbar.Link>
+        <Navbar.Link href="/"><Button color="purple"> Add Contacts</Button></Navbar.Link>
         <Navbar.Link href="/allContact"><Button color="purple">All Contacts </Button></Navbar.Link>
       </Navbar.Collapse>
     </Navbar>

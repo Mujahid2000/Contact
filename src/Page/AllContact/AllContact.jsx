@@ -23,7 +23,7 @@ const AllContact = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch(`http://localhost:5050/addContact/${user?.email}`);
+      const response = await fetch(`https://contact-server-sandy.vercel.app/addContact/${user?.email}`);
       const jsonData = await response.json();
       setData(jsonData);
       setLoading(false);
@@ -57,7 +57,7 @@ const AllContact = () => {
       });
   
       if (result.isConfirmed) {
-        const response = await axios.delete(`http://localhost:5050/addContact/${contact._id}`);
+        const response = await axios.delete(`https://contact-server-sandy.vercel.app/addContact/${contact._id}`);
         console.log(response.data);
         fetchData();
         Swal.fire({
@@ -94,7 +94,7 @@ const handleUpdate = async (event) => {
   };
 
   try {
-    const response = await axios.patch(`http://localhost:5050/addContact/${selectedContactId}`, formData);
+    const response = await axios.patch(`https://contact-server-sandy.vercel.app/addContact/${selectedContactId}`, formData);
     const data = response.data;
     console.log(data);
     if (data.modifiedCount > 0) {
