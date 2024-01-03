@@ -66,7 +66,7 @@ const Login = () => {
       
       
     return (
-        <div className="max-w-6xl mx-auto mt-6 px-3 mb-4">
+        <div className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900">
 <div className="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
     <form onSubmit={handleLogin} className="space-y-6" action="#">
         <h5 className="text-xl font-medium text-gray-900 dark:text-white">Sign in to our platform</h5>
@@ -94,23 +94,12 @@ const Login = () => {
         <div>
         <div className="flex gap-10 justify-center mt-6">
             <button className="inline-block  bg-neutral-100 rounded-full px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-neutral-700 shadow-md transition duration-150 ease-in-out hover:bg-neutral-300 hover:shadow-lg focus:bg-neutral-300 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-neutral-400 active:shadow-lg">
-            <BsFacebook onClick={handleFacebookLogin} className=" bg-white rounded-full w-6 h-6"></BsFacebook>
-            </button>
-            <button className="inline-block  bg-neutral-100 rounded-full px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-neutral-700 shadow-md transition duration-150 ease-in-out hover:bg-neutral-300 hover:shadow-lg focus:bg-neutral-300 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-neutral-400 active:shadow-lg">
-            <BsGoogle
-                onClick={handleGoogleSignIn}
-                className=" rounded-full bg-white w-6 h-6"
-            ></BsGoogle>
-            </button>
-            <button className="inline-block  bg-neutral-100 rounded-full px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-neutral-700 shadow-md transition duration-150 ease-in-out hover:bg-neutral-300 hover:shadow-lg focus:bg-neutral-300 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-neutral-400 active:shadow-lg">
-            <BsGithub className=" bg-white rounded-full w-6 h-6"></BsGithub>
+            <BsGoogle onClick={handleGoogleSignIn} className=" rounded-full bg-white w-6 h-6" ></BsGoogle>
             </button>
         </div>
         </div>
     </form>
-    <div className="flex gap-4 justify-center mt-4">
     
-    </div>
 </div>
 
         </div>
