@@ -2,12 +2,12 @@ import { useContext } from "react";
 
 import { useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import { BsFacebook, BsGithub, BsGoogle } from "react-icons/bs";
+import {  BsGoogle } from "react-icons/bs";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Login = () => {
 
-    const { signIn, googleLogin, faceBookLogin } = useContext(AuthContext);
+    const { signIn, googleLogin } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
     const from = location.state?.from?.pathname || '/'
@@ -29,7 +29,7 @@ const Login = () => {
                 title: "Your work has been saved",
                 showConfirmButton: false,
                 timer: 1500
-              });
+            });
             navigate(from , {replace: true});
         })
     }
@@ -46,23 +46,7 @@ const Login = () => {
     };
 
     
-    const handleFacebookLogin = async () => {
-        try {
-          const result = await faceBookLogin();
-          const user = result.user;
-      
-          if (user && user.email) {
-            
-            console.log('Facebook login successful:', user);
-            navigate('/')
-          } else {
-            
-            console.error('Facebook login error: Missing or invalid email');
-          }
-        } catch (error) {
-          console.error('Facebook login error:', error.message);
-        }
-      };
+    
       
       
     return (
