@@ -7,7 +7,7 @@ import { MdEmail } from 'react-icons/md';
 import { FaLocationDot } from 'react-icons/fa6';
 import Swal from 'sweetalert2';
 import axios from 'axios';
-
+import { IoCall } from "react-icons/io5";
 
 const AllContact = () => {
   const { user } = useContext(AuthContext);
@@ -114,10 +114,10 @@ const handleUpdate = async (event) => {
 
 
   return (
-    <div className="mt-9 mb-9 h-screen">
+    <div className="mt-9 mb-9">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-2 mx-auto max-w-7xl">
         {data.map((contact) => (
-          <Card className="max-w-sm" key={contact._id}>
+          <Card className="max-w-sm hover:scale-105 transition-transform duration-300" key={contact._id}>
             <div className="flex justify-end px-4 pt-4">
               <Dropdown inline label="">
                 <Dropdown.Item>                
@@ -135,7 +135,7 @@ const handleUpdate = async (event) => {
             <div className="flex flex-col items-center pb-10">
               <img src={contact.profilePicture} alt="" className="mb-3 w-28 h-28 rounded-full shadow-lg" />
               <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">{contact.name}</h5>
-              <span className="text-sm text-gray-500 dark:text-gray-400">{contact.phone}</span>
+              <span className="text-sm flex justify-center items-center gap-2 text-gray-500 dark:text-gray-400"><IoCall />{contact.phone}</span>
               <p className="flex justify-center items-center gap-2">
                 <MdEmail /> {contact.email}
               </p>
