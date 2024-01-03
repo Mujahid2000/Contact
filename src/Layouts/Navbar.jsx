@@ -18,7 +18,7 @@ const MyNavbar = () => {
             <Navbar fluid rounded>
       <Navbar.Brand href="">
         <img src="https://i.ibb.co/3f0M4hy/Screenshot-2024-01-02-213147.png" className="mr-3 h-6 rounded-full sm:h-9" alt="Flowbite React Logo" />
-        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Contact Manage</span>
+        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Contact Manager</span>
       </Navbar.Brand>
       <div className="flex md:order-2">
                 {user ? (
