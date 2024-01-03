@@ -66,9 +66,9 @@ const Login = () => {
       
       
     return (
-        <div className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900">
+        <div className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 px-3">
 <div className="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
-    <form onSubmit={handleLogin} className="space-y-6" action="#">
+    <form onSubmit={handleLogin} className="space-y-6" >
         <h5 className="text-xl font-medium text-gray-900 dark:text-white">Sign in to our platform</h5>
         <div>
             <label  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
