@@ -53,8 +53,8 @@ const MyNavbar = () => {
             </div>
       <Navbar.Collapse>
         
-        <Navbar.Link href="/"><Button color="purple"> Add Contacts</Button></Navbar.Link>
-        <Navbar.Link href="/allContact"><Button color="purple">All Contacts </Button></Navbar.Link>
+        <Link to={'/'}><Navbar.Link><Button color="purple"> Add Contacts</Button></Navbar.Link></Link>
+        <Link to={'/allContact'}><Navbar.Link><Button color="purple">All Contacts </Button></Navbar.Link></Link>
       </Navbar.Collapse>
     </Navbar>
         </div>

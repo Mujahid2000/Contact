@@ -115,7 +115,10 @@ const handleUpdate = async (event) => {
 
   return (
     <div className="mt-9 mb-9">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-2 mx-auto max-w-7xl">
+      { data.length === 0 ? (
+    <p className="text-center text-gray-500 dark:text-gray-400">No contacts available</p>
+  ): (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-2 mx-auto max-w-7xl">
         {data.map((contact) => (
           <Card className="max-w-sm hover:scale-105 transition-transform duration-300" key={contact._id}>
             <div className="flex justify-end px-4 pt-4">
@@ -146,6 +149,8 @@ const handleUpdate = async (event) => {
           </Card>
         ))}
       </div>
+        )
+      }
 
       
       <Modal dismissible show={openModal} onClose={() => setOpenModal(false)}>
